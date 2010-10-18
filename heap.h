@@ -1,4 +1,5 @@
 #include <iostream>
+#include "estructuras.h"
 using namespace std;
 
    class max_heap {     // maxheap binario de valores de tipo T comparables
@@ -21,7 +22,7 @@ using namespace std;
       bool borrar_maximo();                      // "true" si se ha borrado
       
       
-      bool insertar(float elemento);         // "true" si se ha podido insertar
+      bool insertar(float elemento); // "true" si se ha podido insertar
       void buildheap();           // se usa para imponer propiedad de orden
       void heapsort();       // despues de esto, el vector YA NO es un heap
    };

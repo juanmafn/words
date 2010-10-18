@@ -1,15 +1,5 @@
 #include "heap.h"
-#include "estructuras.h"
 
-max_heap::max_heap(nodo* v, int tamany_vector){
-    tamanyo=tamany_vector;
-    ocupados=tamany_vector;
-    vector=new nodo [tamanyo];
-    for (int i=0; i<tamanyo; i++)
-	vector[i]=v[i];
-    vector--;	
-    buildheap();  // construeix el heap
-}
 max_heap::max_heap(int tamanyo_maximo){
     tamanyo=tamanyo_maximo;
     ocupados=0;

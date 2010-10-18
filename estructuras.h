@@ -1,5 +1,5 @@
-//#ifndef _EST_
-//#define _EST_
+#ifndef _EST_
+#define _EST_
 
 #include <iostream>
 #include <string.h>
@@ -74,4 +74,4 @@ public:
   }
 };
 
-//#endif 
+#endif 

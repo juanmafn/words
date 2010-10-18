@@ -1,5 +1,5 @@
 CC=g++
-FLAGS=-Wall -ansi -pendantic
+FLAGS=-Wall -ansi -pedantic
 
 words: words.cc heap.o
 	$(CC) -o words words.cc heap.o estructuras.o $(FLAGS)
@@ -9,3 +9,7 @@ heap.o: heap.cc heap.h
 
 estructuras.o: estructuras.cc estructuas.h
 	$(CC) -c estructuras.cc $(FLAGS)
+
+clean:
+	rm -f *.o words
+

@@ -22,9 +22,9 @@ using namespace std;
       bool borrar_maximo();                      // "true" si se ha borrado
       
       
-      bool insertar(float elemento); // "true" si se ha podido insertar
+      bool insertar(nodo *elemento); // "true" si se ha podido insertar
       void buildheap();           // se usa para imponer propiedad de orden
-      void heapsort();       // despues de esto, el vector YA NO es un heap
+      
    };
 
 

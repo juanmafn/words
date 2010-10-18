@@ -37,7 +37,6 @@ palabras *genera_palabras(tipo *letras, int lon){
 
 int main(int argc, char *argv[]){
   palabras *words;
-  max_heap heap;
   tipo *letras = new tipo[argc];
   for(int i=0;i<argc-1;i++){
     letras[i].letra=argv[i+1][0];
@@ -45,11 +44,12 @@ int main(int argc, char *argv[]){
   }
   words=genera_palabras(letras, argc-1);
   //words->ordenar();
-  heap(words->size_pila);
+  int x=words->size_pila();
+  max_heap heap(x);
   nodo *aux=words->cab();
   while(aux){
     heap.insertar(aux);
-    aux=aux->next;
+    aux=aux->sig;
   }
   //words->mostrar();
   return 0;

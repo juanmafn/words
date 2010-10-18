@@ -7,7 +7,7 @@ words: words.cc heap.o estructuras.o
 heap.o: heap.cc heap.h
 	$(CC) -c heap.cc $(FLAGS)
 
-estructuras.o: estructuras.cc estructuas.h
+estructuras.o: estructuras.cc estructuras.h
 	$(CC) -c estructuras.cc $(FLAGS)
 
 clean:

@@ -15,7 +15,7 @@ struct nodo{
   char palabra[50];
   int longitud;
   nodo *sig, *pre;
-  nodo();
+  nodo(){sig=0; pre=0;}
   nodo(nodo *s, nodo *p){sig = s; pre=p;}
 };
 

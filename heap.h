@@ -17,7 +17,7 @@ using namespace std;
       bool vacio() const { return ocupados == 0; }
       bool lleno() const { return ocupados == tamanyo; }
       int ocupacion() const { return ocupados; }
-      
+      nodo maximo(){return vector[1];}      
       
       bool borrar_maximo();                      // "true" si se ha borrado
       

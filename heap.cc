@@ -22,26 +22,6 @@ max_heap::~max_heap(){
    delete [] vector;
 }
 
-bool max_heap::borrar(int pos){
-
-   if (pos > ocupados || pos <= 0)  
-       return false;
-   else {
-      vector[pos] = vector[ocupados];
-      ocupados--;
-
-      // vore si va cap a baix
-      heapify(pos);
-
-      // vore si va cap a munt
-      int valor=vector[pos];
-      while (pos > 1 && valor > vector[padre(pos)]){
-          vector[pos]= vector[padre(pos)];
-          pos=padre(pos);
-      }
-      return true;
-   }
-}
 bool max_heap::insertar(nodo elemento){
     if (ocupados == tamanyo)  // el vector esta ple
          return false; 
@@ -59,14 +39,7 @@ bool max_heap::insertar(nodo elemento){
          return true;
     }
 }
-bool max_heap::maximo(float& elemento){
-   if (ocupados == 0) // esta buit
-      return false;
-   else {
-        elemento=vector[1];
-        return true;
-   }
-}
+
 bool max_heap::borrar_maximo(){
     if (ocupados == 0)  //esta buit
         return false;
